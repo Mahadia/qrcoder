@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom1"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_below="@id/buttonPanel1"
+        android:layout_marginTop="115dp"
+        android:background="#1E90FF"
+        app:itemIconTint="#000000"
+        app:menu="@menu/menu"
+        />
+
+    <FrameLayout
+        android:id="@+id/frame_lay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/bottom1"/>
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/scanner_view"
+        app:autoFocusButtonColor="@android:color/holo_blue_light"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonColor="@android:color/white"
+        app:flashButtonVisible="true"
+        app:maskColor="@android:color/holo_blue_dark"
+
+
+        />
+    <TextView
+        android:id="@+id/tv_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scanner_view"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="Scanner votre code qr "
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <Button
+        android:id="@+id/buttonPanel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_textView"
+        android:layout_centerHorizontal="true"
+        android:text="scan"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_dark"
+
+        />
+
+
+
+</RelativeLayout>
